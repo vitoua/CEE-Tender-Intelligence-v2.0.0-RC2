@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: goodram-tender-intelligence-v2
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: DATA_DIR
+        value: /app/data
